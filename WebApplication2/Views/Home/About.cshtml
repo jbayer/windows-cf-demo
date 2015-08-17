@@ -1,7 +1,22 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+@using System
+@using System.Collections
 
-<p>Use this area to provide additional information.</p>
+@{
+    ViewBag.Title = "About";
+
+    IDictionary environmentVariables = Environment.GetEnvironmentVariables();
+}
+
+<div class="envs">
+    <dl>
+@foreach (var entry in environmentVariables)
+{
+      <span>
+        <dt>@entry.Key</dt>
+        <dd>@entry.Value</dd>
+      </span>
+}
+    </dl>
+</div>
+
+
