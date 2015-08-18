@@ -20,7 +20,7 @@ namespace WebApplication2.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult env()
         {
             ViewBag.Message = "Your application description page!";
 
