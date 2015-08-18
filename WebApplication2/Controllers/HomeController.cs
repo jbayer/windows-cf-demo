@@ -1,12 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using System.Threading;
 
 namespace WebApplication2.Controllers
 {
+    public class ExitHelper
+    {
+        public void exitAfterDelay()
+        {
+            //call exit after 500ms
+            Timer timer = new System.Threading.Timer(obj => { exit(); }, null, 500, System.Threading.Timeout.Infinite);
+        }
+
+        public void exit()
+        {
+            Process.GetCurrentProcess().Kill();
+        }
+    }
+
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -24,6 +36,16 @@ namespace WebApplication2.Controllers
         {
             ViewBag.Message = "Your application description page!";
 
+            return View();
+        }
+
+        public ActionResult exit()
+        {
+            ViewBag.Index = Environment.GetEnvironmentVariable("INSTANCE_INDEX");
+            if (ViewBag.Index == null)
+                ViewBag.Index = "-";
+
+            //new ExitHelper().exitAfterDelay();
             return View();
         }
 
