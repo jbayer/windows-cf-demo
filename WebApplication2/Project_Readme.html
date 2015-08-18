@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Your ASP.NET application</title>
+    <title>Simple ASP.NET Cloud Foundry app</title>
     <style>
         body {
             background: #fff;
@@ -96,7 +96,7 @@
 <body>
 
     <div id="header">
-        <h1>Your ASP.NET application</h1>
+        <h1>Simple ASP.NET Cloud Foundry app</h1>
         <p>Congratulations! You've created a project</p>
     </div>
 
@@ -104,45 +104,30 @@
         <div class="section first">
             <h2>This application consists of:</h2>
             <ul>
-                <li>Sample pages showing basic nav between Home, About, and Contact</li>
-                <li>Theming using <a href="http://go.microsoft.com/fwlink/?LinkID=615519">Bootstrap</a></li>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615520">Authentication</a>, if selected, shows how to register and sign in</li>
-                <li>ASP.NET features managed using <a href="http://go.microsoft.com/fwlink/?LinkID=320756">NuGet</a></li>
+                <li>This app showcases some Cloud Foundry features like environment variables</li>
+                <li>Cloud Foundry automated recovery via the /exit endpoint</li>
+                <li>refresh on the index page and it should load balnace through the instances</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2>Customize app</h2>
+            <h2>Details about the app</h2>
             <ul>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615541">Get started with ASP.NET MVC</a></li>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615523">Change the site's theme</a></li>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615524">Add more libraries using NuGet</a></li>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615542">Configure authentication</a></li>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615526">Customize information about the website users</a></li>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615527">Get information from social providers</a></li>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615528">Add HTTP services using ASP.NET Web API</a></li>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615529">Secure your web API</a></li>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615530">Add real-time web with ASP.NET SignalR</a></li>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615531">Add components using Scaffolding</a></li>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615532">Test your app with Browser Link</a></li>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615533">Share your project</a></li>
+                <li>This app was created from a MS Visual Studio Community Edition .NET 4.5 MVC project</li>
             </ul>
         </div>
 
         <div class="section">
             <h2>Deploy</h2>
             <ul>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615534">Ensure your app is ready for production</a></li>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615535">Microsoft Azure</a></li>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615536">Hosting providers</a></li>
+                <li>Use the "cf push" cli from the project's Publish output targeted at the file system</li>
             </ul>
         </div>
 
         <div class="section last">
             <h2>Get help</h2>
             <ul>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615537">Get help</a></li>
-                <li><a href="http://go.microsoft.com/fwlink/?LinkID=615538">Get more templates</a></li>
+                <li>Open issues at <a href="https://github.com/jbayer/windows-cf-demo/issues">github.com/jbayer/windows-cf-demo</a></li>
             </ul>
         </div>
     </div>
